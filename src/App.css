@@ -1,38 +1,177 @@
+/* Dark Theme - Colours
+1. Background (0dp elevation surface overlay)
+2. Surface (with 1dp elevation surface overlay)
+3. Primary
+4. Secondary
+5. On background
+6. On Surface
+7. On Primary
+8. On Secondary
+
+1.#121212
+2.#121212
+3.#BB86FC
+4.#03DAC6
+5.#FFFFFF
+6.#FFFFFF
+7.#000000
+8.#000000
+
+
+
+| elevation | overlay |   hex   |
+| --------- | ------- | ------- |
+|   00dp    |    0%   | #121212 |
+|   01dp    |    5%   | #1e1e1e |
+|   02dp    |    7%   | #222222 |
+|   03dp    |    8%   | #242424 |
+|   04dp    |    9%   | #272727 |
+|   06dp    |   11%   | #2c2c2c |
+|   08dp    |   12%   | #2e2e2e |
+|   12dp    |   14%   | #333333 |
+|   16dp    |   15%   | #343434 |
+|   24dp    |   16%   | #383838 |
+
+
+Component elevation values
+1. Nav drawer: 16dp
+2. App bar: 4dp
+3. Card: 1dp to 8dp
+4. FAB: 6dp
+5. Button: 2dp to 8dp
+6. Dialog: 24dp
+*/
+
 .App {
+  font-family: 'Alumni Sans Pinstripe';
+  font-size: 22px;
   text-align: center;
+  background-color: #2b0465;
+  color: white;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+section {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  font-size: 32px;
+  font-weight: bold;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+
+#home {
+  margin-top: -70px;
+  padding-left: 49%;
+  padding-top: -10%;
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#HomeDiv {
+  outline-color: #64ffda;
+  outline-style: solid;
+  background-color: #2b0465;
+  box-shadow: 0px 0px 40px #64ffda;
+}
+
+#HomeHeader {
+  margin: 20px;
+}
+
+#AboutRow {
   display: flex;
-  flex-direction: column;
+  width: 70%;
+  height: 80%;
+  background-color: #BB86FC;
+  border-radius: 5%;
+}
+
+#AboutColumn {
+  flex: 50%;
+}
+
+.nav {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  position: -webkit-sticky;
+  position: sticky;
+  top: -5px;
+  z-index: 2;
+  height: 70px;
+  min-height: 70px;
+  width: calc(100% - 1.5rem);
+  /* background-color: transparent; */
+  background-color:#2b0465;
+  padding: 0 1rem;
+  box-shadow: 0 0.125rem 0.25rem 0 rgb(0 0 0 / 11%);
+  color: white;
+  /* box-shadow: none; */
+
+}
+
+.nav__container {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.nav__container__actions {
+  display: inline-flex;
+  flex-flow: row nowrap;
+  padding-left: 50px;
+  flex: 1;
+}
+
+.active {
+  font-weight: bold;
+  color: #64ffda;
+}
+
+.nav_ul {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.9rem;
+  list-style: none;
+  padding: 0;
+}
+
+.nav_li {
+  cursor: pointer;
+  font-size: 25px;
+}
+
+.nav_li:hover {
+  color: #64ffda;
+}
+
+.icons {
+  cursor: pointer;
+  align-items: right;
+  list-style: none;
+  padding: 1rem;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+a:hover {
+  color: #64ffda;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+a {
+  color: white;;
+  text-decoration: none;
+}
+
+
+
+
+
+.HomeHeader {
+  color:white;
 }
