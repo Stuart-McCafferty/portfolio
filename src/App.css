@@ -43,10 +43,10 @@ Component elevation values
 */
 
 .App {
-  font-family: 'Alumni Sans Pinstripe';
+  font-family: 'Sawarabi Gothic';
   font-size: 22px;
-  text-align: center;
-  background-color: #2b0465;
+  /* background-color: #2b0465; */
+  background-color: #430391;
   color: white;
 
 }
@@ -60,7 +60,7 @@ section {
 
 }
 
-
+/* HOME SECTION */
 
 #home {
   margin-top: -70px;
@@ -70,27 +70,103 @@ section {
 }
 
 #HomeDiv {
-  outline-color: #64ffda;
+  position: absolute;
+  left: 150px;
+  top: 400px;
+  /* outline-color: #64ffda;
   outline-style: solid;
   background-color: #2b0465;
-  box-shadow: 0px 0px 40px #64ffda;
+  box-shadow: 0px 0px 40px #64ffda; */
 }
 
-#HomeHeader {
-  margin: 20px;
+#HomeP {
+  font-size: 32px;
+  color: #64ffda;
+  margin-left: 32px;
+  margin-bottom: 5px;
 }
+
+#HomeH {
+  margin-left: 32px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 128px;
+}
+
+#HomeH3 {
+  margin-left: 32px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 64px;
+}
+
+#HomeH4 {
+  margin-left: 32px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 48px;
+  color: #64ffda;
+}
+
+/* ABOUT SECTION */
 
 #AboutRow {
   display: flex;
-  width: 70%;
+  width: 85%;
   height: 80%;
-  background-color: #BB86FC;
-  border-radius: 5%;
+  /* background-color: #BB86FC; */
 }
 
 #AboutColumn {
   flex: 50%;
+  margin-right: 50px;
 }
+
+#AboutH1 {
+  font-size: 64px;
+  color: #64ffda;
+}
+
+#AboutP {
+  font-size: 36px;
+}
+
+#AboutSkill {
+  font-size: 42px;
+  color: #64ffda;
+
+}
+
+#AboutUL {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  list-style: none;
+}
+
+#AboutUL > li {
+  position: relative;
+  margin-right: 50px;
+  color: white;
+  font-size: 42px;
+}
+
+#AboutUL > li:before {
+  position: absolute;
+  content: "";
+  left: -30px;
+  top: 25px;
+  background-color: #64ffda;
+  width: 14px;
+  height: 14px;
+  border-radius: 10px;
+}
+
+#AboutUL > li:first-child:before {
+  display: none;
+}
+
+/* NAVIGATION SECTION */
 
 .nav {
   display: flex;
@@ -99,7 +175,7 @@ section {
   position: sticky;
   top: -5px;
   z-index: 2;
-  height: 70px;
+  height: 120px;
   min-height: 70px;
   width: calc(100% - 1.5rem);
   /* background-color: transparent; */
@@ -144,7 +220,7 @@ section {
 
 .nav_li {
   cursor: pointer;
-  font-size: 25px;
+  font-size: 50px;
 }
 
 .nav_li:hover {
@@ -157,6 +233,7 @@ section {
   list-style: none;
   padding: 1rem;
   color: white;
+  font-size: 50px;
 }
 
 a:hover {

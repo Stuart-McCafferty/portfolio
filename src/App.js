@@ -5,8 +5,6 @@ import HomeContainer from './containers/HomeContainer';
 import AboutContainer from './containers/AboutContainer';
 import ContactContainer from './containers/ContactContainer';
 import ProjectsContainer from './containers/ProjectsContainer';
-import Icon from './containers/Icon'
-import PageTwoBG from './containers/PageTwoBG';
 import { renderToStaticMarkup } from "react-dom/server";
 import { faHome } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -14,14 +12,10 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 
 export default function App(){
-	const page1String = encodeURIComponent(renderToStaticMarkup(<Icon/>));
-	const page2String = encodeURIComponent(renderToStaticMarkup(<PageTwoBG/>));
-
-
 	return (
 		<>
 		<head>
-			<link href='https://fonts.googleapis.com/css?family=Alumni Sans Pinstripe' rel='stylesheet'/>
+			<link href='https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&display=swap' rel='stylesheet'/>
 		</head>
 		<div className="App">
 			<header className="nav">
@@ -56,18 +50,10 @@ export default function App(){
 					<a href="http://www.google.com"> <FontAwesomeIcon icon={faLinkedinIn} size="2x"/></a>
 				</li>
 			</header>
-			<section id="home" style={{
-                backgroundImage: `url("data:image/svg+xml,${page1String}")`
-            }}><HomeContainer/></section>
-			<section id="about" style={{
-                backgroundImage: `url("data:image/svg+xml,${page2String}")`
-            }}><AboutContainer/></section>
-			<section id="projects" style={{
-                backgroundImage: `url("data:image/svg+xml,${page2String}")`
-            }}><ProjectsContainer/></section>
-			<section id="contact" style={{
-                backgroundImage: `url("data:image/svg+xml,${page2String}")`
-            }}><ContactContainer/></section>
+			<section id="home"><HomeContainer/></section>
+			<section id="about"><AboutContainer/></section>
+			<section id="projects"><ProjectsContainer/></section>
+			<section id="contact" ><ContactContainer/></section>
 		
 		</div>
 		</>
